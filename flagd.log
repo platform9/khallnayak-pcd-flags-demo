@@ -1,0 +1,39 @@
+
+		 ______   __       ________   _______    ______      
+		/_____/\ /_/\     /_______/\ /______/\  /_____/\     
+		\::::_\/_\:\ \    \::: _  \ \\::::__\/__\:::_ \ \    
+		 \:\/___/\\:\ \    \::(_)  \ \\:\ /____/\\:\ \ \ \   
+		  \:::._\/ \:\ \____\:: __  \ \\:\\_  _\/ \:\ \ \ \  
+		   \:\ \    \:\/___/\\:.\ \  \ \\:\_\ \ \  \:\/.:| | 
+		    \_\/     \_____\/ \__\/\__\/ \_____\/   \____/_/ 
+
+2026-06-04T19:53:01.584+0530	info	cmd/start.go:150	flagd version: dev (HEAD), built at: unknown	{"component": "start"}
+2026-06-04T19:53:01.586+0530	info	cmd/start.go:184	request body limit set to 1000000 bytes	{"component": "start"}
+2026-06-04T19:53:01.586+0530	info	cmd/start.go:188	request header limit set to 1000000 bytes	{"component": "start"}
+2026-06-04T19:53:01.594+0530	info	flag-sync/sync_service.go:107	starting flag sync service on port 8015	{"component": "FlagSyncService"}
+2026-06-04T19:53:01.596+0530	info	file/filepath_sync.go:60	Starting filepath sync notifier	{"component": "sync", "sync": "fileinfo"}
+2026-06-04T19:53:01.606+0530	info	file/filepath_sync.go:97	starting sync from ./flags.json	{"component": "sync", "sync": "fileinfo"}
+2026-06-04T19:53:01.607+0530	info	ofrep/ofrep_service.go:73	ofrep service listening at 8016	{"component": "OFREPService"}
+2026-06-04T19:53:01.607+0530	info	flag-evaluation/connect_service.go:268	metrics and probes listening at 8014	{"component": "service"}
+2026-06-04T19:53:01.608+0530	info	flag-evaluation/connect_service.go:255	Flag IResolver listening at [::]:8013	{"component": "service"}
+2026-06-04T19:53:09.607+0530	info	file/filepath_sync.go:110	filepath event: ./flags.json WRITE	{"component": "sync", "sync": "fileinfo"}
+2026-06-04T19:53:14.607+0530	info	file/filepath_sync.go:110	filepath event: ./flags.json WRITE	{"component": "sync", "sync": "fileinfo"}
+2026-06-04T19:53:19.436+0530	info	ofrep/ofrep_service.go:84	shutting down ofrep service	{"component": "OFREPService"}
+2026-06-04T19:53:19.436+0530	info	flag-sync/sync_service.go:167	shutting down gRPC sync service	{"component": "FlagSyncService"}
+2026-06-04T19:53:24.437+0530	info	runtime/runtime.go:77	Shutting down server...	{"component": "runtime"}
+2026-06-04T19:53:24.437+0530	info	runtime/runtime.go:79	Server successfully shutdown.	{"component": "runtime"}
+2026-06-04T19:53:24.438+0530	fatal	cmd/start.go:221	errgroup closed with error: error returned from serving flag evaluation service: errgroup closed with error: error shutting down server: context deadline exceeded	{"component": "start"}
+github.com/open-feature/flagd/flagd/cmd.init.func2
+	/Users/mahij/go/pkg/mod/github.com/open-feature/flagd/flagd@v0.16.0/cmd/start.go:221
+github.com/spf13/cobra.(*Command).execute
+	/Users/mahij/go/pkg/mod/github.com/spf13/cobra@v1.9.1/command.go:1019
+github.com/spf13/cobra.(*Command).ExecuteC
+	/Users/mahij/go/pkg/mod/github.com/spf13/cobra@v1.9.1/command.go:1148
+github.com/spf13/cobra.(*Command).Execute
+	/Users/mahij/go/pkg/mod/github.com/spf13/cobra@v1.9.1/command.go:1071
+github.com/open-feature/flagd/flagd/cmd.Execute
+	/Users/mahij/go/pkg/mod/github.com/open-feature/flagd/flagd@v0.16.0/cmd/root.go:53
+main.main
+	/Users/mahij/go/pkg/mod/github.com/open-feature/flagd/flagd@v0.16.0/main.go:12
+runtime.main
+	/Users/mahij/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.25.11.darwin-arm64/src/runtime/proc.go:285
